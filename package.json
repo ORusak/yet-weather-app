@@ -1,0 +1,21 @@
+{
+  "name": "yet-weather-app",
+  "description": "Sandbox for react tech",
+  "version": "0.0.1",
+  "private": true,
+  "repository": "https://github.com/ORusak/yet-weather-app",
+  "author": "Oleg Rusak",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "~4.17.4",
+    "react": "~15.6.1",
+    "react-dom": "~15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

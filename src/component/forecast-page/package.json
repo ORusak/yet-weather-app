@@ -1,0 +1,6 @@
+{
+    "name": "forecast-page",
+    "description": "component",
+    "version": "0.0.1",
+    "main": "forecast-page.js"
+}

@@ -1,0 +1,6 @@
+{
+    "name": "forecast-list",
+    "description": "Component",
+    "version": "0.0.1",
+    "main": "forecast-list.js"
+}

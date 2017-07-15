@@ -1,0 +1,6 @@
+{
+    "name": "button-sort",
+    "description": "Component",
+    "version": "0.0.1",
+    "main": "button-sort.js"
+}

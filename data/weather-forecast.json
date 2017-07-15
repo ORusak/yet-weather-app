@@ -1,0 +1,9 @@
+{
+    "features": ["☀", "" ],
+    "name": "Иваново",
+    "weather": "+23ºC",
+    "location": {
+        "lat": 21,
+        "lng": 22
+    }
+}
