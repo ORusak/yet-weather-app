@@ -1,9 +1,18 @@
 import React from 'react';
 import './button-sort.css'
 
-export default function ButtonSort () {
+const directionMap = {
+  'asc': 'А-я',
+  'desc': 'Я-а',
+  '': 'А-Я'
+}
 
-  return <button className="Button Button-sort">
-    ButtonSort
+const ButtonSort = ({ children, direct='' }) => (
+  <button className="Button Button-sort">
+    {children} [{directionMap[direct]}]
   </button>
-};
+)
+
+ButtonSort.propTypes = {}
+
+export default ButtonSort

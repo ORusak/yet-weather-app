@@ -1,0 +1,6 @@
+{
+    "name": "visible-forecast-favourite-block",
+    "description": "component-container",
+    "version": "0.0.1",
+    "main": "visible-forecast-favourite-block.js"
+}

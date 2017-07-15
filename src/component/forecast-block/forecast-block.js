@@ -4,11 +4,15 @@ import './forecast-block.css'
 import ForecastList from './../forecast-list'
 import Toolbar from './../toolbar'
 
-export default function BlockForecast () {
-
-  return <div className="Forecast-block">
+const BlockForecast = ({ list, sort, filters, onChangeOrder, onFilterByText, onFilterByFeatures }) => (
+  <div className="Forecast-block">
     BlockForecast
-    <Toolbar />
-    <ForecastList />
+    <Toolbar sort={sort} {...filters}
+             onChangeOrder={onChangeOrder}
+             onFilterByText={onFilterByText}
+             onFilterByFeatures={onFilterByFeatures}/>
+    <ForecastList list={list} />
   </div>
-};
+)
+
+export default BlockForecast

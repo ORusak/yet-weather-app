@@ -1,0 +1,6 @@
+{
+    "name": "visible-forecast-block",
+    "description": "component-container",
+    "version": "0.0.1",
+    "main": "visible-forecast-block.js"
+}

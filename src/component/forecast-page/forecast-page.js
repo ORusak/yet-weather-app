@@ -1,14 +1,16 @@
 import React from 'react';
 import './forecast-page.css'
 
-import ForecastBlock from './../forecast-block'
+import VisibleForecastBlock from './../../containers/visible-forecast-block'
+import VisibleForecastFavouriteBlock from './../../containers/visible-forecast-favourite-block'
 import MapBox from './../map-box'
 
-export default function ForecastPage () {
-
-  return <div className="Forecast-page">
-    <ForecastBlock />
-    <ForecastBlock />
+const ForecastPage = () => (
+  <div className="Forecast-page">
+    <VisibleForecastBlock />
+    <VisibleForecastFavouriteBlock />
     <MapBox />
   </div>
-};
+)
+
+export default ForecastPage

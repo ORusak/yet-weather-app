@@ -1,7 +1,8 @@
 import React from 'react';
 import './input-search.css'
 
-export default function InputSearch () {
+const InputSearch = () => (
+  <input className="Input-search" />
+)
 
-  return <input className="Input-search" />
-};
+export default InputSearch

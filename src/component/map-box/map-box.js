@@ -1,9 +1,10 @@
 import React from 'react';
 import './map-box.css'
 
-export default function MapBox () {
-
-  return <div className="Map-box">
+const MapBox = () => (
+  <div className="Map-box">
     MapBox
   </div>
-};
+)
+
+export default MapBox
