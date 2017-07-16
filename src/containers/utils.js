@@ -48,7 +48,6 @@ const filterListForecast = (list, searchText, features) => {
 const sortListForeCast = (list, sort) => {
   //  перебираем с права на лево чтобы сортировка по первым элементам была последней
   return reduceRight(sort, (result, value, key) => {
-    console.log('sort')
     const sortElement = first(toPairs(value))
     const nameProp = sortElement[0]
     const valueProp = sortElement[1]
@@ -66,9 +65,7 @@ const sortListForeCast = (list, sort) => {
       const value2 = b[nameProp]
 
       //  todo: ora: добавить проверку на подержку localeCompare браузером
-      if(value1.localeCompare(value2)) {
-        return -1 * directionSort
-      }
+      return directionSort * value1.localeCompare(value2)
     })
   }, list)
 }

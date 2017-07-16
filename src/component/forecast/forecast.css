@@ -1,4 +1,14 @@
 .Forecast {
     margin: 5px 5px;
     border: 1px solid #222222;
+    cursor: move;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+.Forecast [draggable] {
+    user-select: none;
+}
+
+.Forecast.over {
+    border: 1px dashed #000;
 }

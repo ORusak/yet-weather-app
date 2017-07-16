@@ -10,7 +10,7 @@ import configureStore from './store/configure-store';
 const store = configureStore({
   regions: {
     "0": {
-      "id": 0,
+      "id": "0",
       "features": ["☀", ""],
       "name": "Иваново",
       "weather": "+23ºC",
@@ -20,7 +20,7 @@ const store = configureStore({
       }
     },
     "1": {
-      "id": 1,
+      "id": "1",
       "features": ["{}", ""],
       "name": "Чертаново",
       "weather": "+3ºC",
@@ -28,10 +28,20 @@ const store = configureStore({
         "lat": 10,
         "lng": 92
       }
+    },
+    "2": {
+      "id": "2",
+      "features": ["{}", ""],
+      "name": "Малые бодуны",
+      "weather": "-50ºC",
+      "location": {
+        "lat": 110,
+        "lng": -32
+      }
     }
   },
   forecast: {
-    ids: [0, 1],
+    ids: ["0", "1"],
     type: 'forecast',
     sort: [{
       name: 'asc'
@@ -42,13 +52,13 @@ const store = configureStore({
     }
   },
   forecastFavourite: {
-    ids: [1],
+    ids: ["2"],
     type: 'forecastFavourite',
     sort: [{
       name: ''
     }],
     filters: {
-      searchText: 'ано',
+      searchText: '',
       features: ['{}']
     }
   },
