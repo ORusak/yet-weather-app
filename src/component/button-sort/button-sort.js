@@ -7,8 +7,8 @@ const directionMap = {
   '': 'А-Я'
 }
 
-const ButtonSort = ({ children, direct='' }) => (
-  <button className="Button Button-sort">
+const ButtonSort = ({ children, direct='', prop, onChangeOrder }) => (
+  <button className="Button Button-sort" onClick={() => onChangeOrder(prop)}>
     {children} [{directionMap[direct]}]
   </button>
 )

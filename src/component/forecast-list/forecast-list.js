@@ -8,7 +8,7 @@ const ListForecast = ({ list }) => (
   <ol className="Forecast-list">
     {
       map(list, item => {
-        console.log(item)
+
         return (<Forecast key={item.id} {...item}/>)
       })
     }

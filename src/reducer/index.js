@@ -4,13 +4,13 @@
 
 import { combineReducers } from 'redux'
 
-import forecast from './forecast-common'
+import forecast1 from './forecast-common'
 import regions from './regions'
 import options from './options'
 
 export default combineReducers({
   regions,
-  forecast,
-  forecastFavourite: forecast,
+  forecast: forecast1,
+  forecastFavourite: forecast1,
   options
 })

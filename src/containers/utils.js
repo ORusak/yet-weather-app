@@ -7,6 +7,8 @@ import filter from 'lodash/filter'
 import reduceRight from 'lodash/reduceRight'
 import difference from 'lodash/difference'
 import assign from 'lodash/assign'
+import toPairs from 'lodash/toPairs'
+import first from 'lodash/first'
 
 const filterListForecast = (list, searchText, features) => {
 
@@ -46,27 +48,27 @@ const filterListForecast = (list, searchText, features) => {
 const sortListForeCast = (list, sort) => {
   //  перебираем с права на лево чтобы сортировка по первым элементам была последней
   return reduceRight(sort, (result, value, key) => {
+    console.log('sort')
+    const sortElement = first(toPairs(value))
+    const nameProp = sortElement[0]
+    const valueProp = sortElement[1]
+
     //  если порядок не определен пропускаем
-    if (value !== 'asc' || value !== 'desc') {
+    if (valueProp !== 'asc' && valueProp !== 'desc') {
 
       return result
     }
 
-    const directionSort = value === 'asc' ? 1 : -1
+    const directionSort = valueProp === 'asc' ? 1 : -1
 
     return result.sort((a, b) => {
-      const value1 = a[key]
-      const value2 = b[key]
+      const value1 = a[nameProp]
+      const value2 = b[nameProp]
 
-      if(value1 < value2) {
+      //  todo: ora: добавить проверку на подержку localeCompare браузером
+      if(value1.localeCompare(value2)) {
         return -1 * directionSort
       }
-
-      if(value1 > value2) {
-        return directionSort
-      }
-
-      return 0
     })
   }, list)
 }
@@ -84,7 +86,6 @@ export const getVisibleForecast = (list, { ids=[], sort=[], filters }) => {
 export const getVisibleSort = (list) => {
 
   return reduceRight(list, (result, item) => {
-    console.log(item)
     assign(result, item)
 
     return result

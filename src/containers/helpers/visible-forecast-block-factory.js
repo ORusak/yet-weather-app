@@ -7,10 +7,13 @@ import ForecastBlock from './../../component/forecast-block'
 
 import { getVisibleForecast, getVisibleSort } from '../utils'
 
+//  actions
+import { changeSearchValue, changeOrderValue } from '../../reducer/forecast-common'
+
 const factoryVisibleForecastBlock = (nameList) => {
 
   const mapStateToProps = (state) => {
-    console.log(state[nameList])
+    console.log(state)
     return {
       list: getVisibleForecast(state.regions, state[nameList]),
       sort: getVisibleSort(state[nameList].sort),
@@ -18,14 +21,14 @@ const factoryVisibleForecastBlock = (nameList) => {
     }
   }
 
-  const mapDispatchToProps = dispatch => {
+  const mapDispatchToProps = (dispatch, ownProps) => {
 
     return {
-      onChangeOrder: order => {
-        dispatch()
+      onChangeOrder: (prop) => {
+        dispatch(changeOrderValue(prop, nameList))
       },
-      onFilterByText: text => {
-        dispatch()
+      onFilterByText: ev => {
+        dispatch(changeSearchValue(ev.target.value, nameList))
       },
       onFilterByFeatures: features => {
         dispatch()

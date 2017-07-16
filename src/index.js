@@ -32,6 +32,7 @@ const store = configureStore({
   },
   forecast: {
     ids: [0, 1],
+    type: 'forecast',
     sort: [{
       name: 'asc'
     }],
@@ -42,8 +43,9 @@ const store = configureStore({
   },
   forecastFavourite: {
     ids: [1],
+    type: 'forecastFavourite',
     sort: [{
-      name: undefined
+      name: ''
     }],
     filters: {
       searchText: 'ано',
