@@ -1,0 +1,32 @@
+{
+    "0": {
+        "id": "0",
+        "features": ["☀", ""],
+        "name": "Иваново",
+        "weather": "+23ºC",
+        "location": {
+            "lat": 21,
+            "lng": 22
+        }
+    },
+    "1": {
+        "id": "1",
+        "features": ["{}", ""],
+        "name": "Чертаново",
+        "weather": "+3ºC",
+        "location": {
+            "lat": 10,
+            "lng": 92
+        }
+    },
+    "2": {
+        "id": "2",
+        "features": ["{}", ""],
+        "name": "Малые бодуны",
+        "weather": "-50ºC",
+        "location": {
+            "lat": 110,
+            "lng": -32
+        }
+    }
+}

@@ -6,9 +6,10 @@ import InputSearch from './../input-search'
 
 const Toolbar = ({sort, searchText, features,  onChangeOrder, onFilterByText }) => (
   <div className="Toolbar">
-    toolbar
-    <ButtonSort direct={sort['name']} prop={'name'} onChangeOrder={onChangeOrder}>Название</ButtonSort>
+    <h4>Фильтры</h4>
     <InputSearch value={searchText} onFilterByText={onFilterByText}/>
+    <h4>Сортировка</h4>
+    <ButtonSort direct={sort['name']} prop={'name'} onChangeOrder={onChangeOrder}>Название</ButtonSort>
   </div>
 )
 

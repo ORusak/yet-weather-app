@@ -74,7 +74,8 @@ export const getVisibleForecast = (list, { ids=[], sort=[], filters }) => {
   const { searchText='', features=[] } = filters
 
   const listForecast = map(ids, id => list[id])
-  const listForecastFiltered = filterListForecast(listForecast, searchText, features)
+  const listForecastRemoveEmpty = filter(listForecast, item => item)
+  const listForecastFiltered = filterListForecast(listForecastRemoveEmpty, searchText, features)
   const listForecastOrdered = sort.length !== 0 ? sortListForeCast(listForecastFiltered, sort): listForecastFiltered
 
   return listForecastOrdered

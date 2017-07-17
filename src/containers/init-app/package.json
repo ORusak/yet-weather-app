@@ -1,0 +1,6 @@
+{
+    "name": "init-app",
+    "description": "component-container",
+    "version": "0.0.1",
+    "main": "init-app.js"
+}

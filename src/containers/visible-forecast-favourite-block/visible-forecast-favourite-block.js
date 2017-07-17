@@ -5,5 +5,6 @@
 import factory from '../helpers/visible-forecast-block-factory'
 
 const NAME_LIST = 'forecastFavourite'
+const title = 'Избранное'
 
-export default factory(NAME_LIST)
+export default factory(NAME_LIST, title)

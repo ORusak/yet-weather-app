@@ -10,14 +10,15 @@ import { getVisibleForecast, getVisibleSort } from '../utils'
 //  actions
 import { changeSearchValue, changeOrderValue, sortManualList } from '../../reducer/forecast-common'
 
-const factoryVisibleForecastBlock = (nameList) => {
+const factoryVisibleForecastBlock = (nameList, title) => {
 
   const mapStateToProps = (state) => {
 
     return {
       list: getVisibleForecast(state.regions, state[nameList]),
       sort: getVisibleSort(state[nameList].sort),
-      filters: state[nameList].filters
+      filters: state[nameList].filters,
+      title
     }
   }
 

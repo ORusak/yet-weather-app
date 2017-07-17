@@ -4,12 +4,14 @@
 
 import get from 'lodash/get'
 import indexOf from 'lodash/indexOf'
+import union from 'lodash/union'
 
 import { findElementByKey, getNextSortDirection } from './utils'
 
 const CHANGE_FILTER_NAME = 'yet-weather-app/forecast/CHANGE_FILTER_NAME'
 const CHANGE_ORDER_LIST = 'yet-weather-app/forecast/CHANGE_ORDER_LIST'
 const SORT_MANUAL_LIST = 'yet-weather-app/forecast/SORT_MANUAL_LIST'
+const UPDATE_LIST_ID = 'yet-weather-app/forecast/UPDATE_LIST_ID'
 
 export default function reducer (state = {
   ids: [],
@@ -85,6 +87,10 @@ export default function reducer (state = {
 
       return { ...state, sort }
 
+    case UPDATE_LIST_ID:
+
+      return { ...state, ids: union(state.ids, action.ids)}
+
     default:
       return state
   }
@@ -105,4 +111,7 @@ export function sortManualList (source, target) {
   return { type: SORT_MANUAL_LIST, source, target}
 }
 
+export function updateListForecast (ids) {
 
+  return { type: UPDATE_LIST_ID, typeList: 'forecast', ids}
+}

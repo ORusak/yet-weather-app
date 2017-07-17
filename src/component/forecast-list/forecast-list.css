@@ -1,4 +1,6 @@
 .Forecast-list {
     margin: 5px 5px;
+    padding: 0px;
     border: 1px solid #222222;
+    list-style-type: none;
 }
