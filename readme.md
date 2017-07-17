@@ -1,5 +1,13 @@
 # Описание
-Yet weather app. react, redux, MapBox.
+Yet weather app. react, redux, create-react-app, MapBox.
+
+# Запуск
+```bash
+git clone https://github.com/ORusak/yet-weather-app.git
+cd yet-weather-app
+yarn install
+yarn start
+```
 
 # Требования
 * 
@@ -26,3 +34,8 @@ Yet weather app. react, redux, MapBox.
 * документация
 * тесты
     * unit
+
+# Описание
+* public/data/weather-forecast.json - данные
+* src/index.js - точка входа
+* ...

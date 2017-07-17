@@ -7,7 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import configureStore from './store/configure-store';
 
-const store = configureStore({
+//  todo: добавить получение из localStorage
+const initialState = {
   regions: {
   },
   forecast: {
@@ -35,7 +36,8 @@ const store = configureStore({
   options: {
     unit: 'C'
   }
-})
+}
+const store = configureStore(initialState)
 
 ReactDOM.render(
   <Provider store={ store }>
